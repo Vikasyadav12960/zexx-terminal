@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=80", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zexx-terminal"
+version = "0.1.0"
+description = "A modular retro-inspired terminal operating environment built with Python."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+
+authors = [
+    { name = "Vikas Yadav" }
+]
+
+keywords = [
+    "terminal",
+    "textual",
+    "retro",
+    "games",
+    "launcher",
+    "python"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Topic :: Games/Entertainment",
+    "Topic :: Utilities"
+]
+
+dependencies = [
+    "textual>=8.2.8",
+    "rich>=15.0.0",
+    "psutil>=7.2.2"
+]
+
+[project.urls]
+Homepage = "https://github.com/Vikasyadav12960/zexx-terminal"
+Repository = "https://github.com/Vikasyadav12960/zexx-terminal"
+Issues = "https://github.com/Vikasyadav12960/zexx-terminal/issues"
