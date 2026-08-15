@@ -5,7 +5,12 @@ def main():
     engine = CommandEngine()
 
     def help_command(args):
-        return "ZEXX commands: help, exit"
+        lines = ["Available commands:"]
+
+        for command in engine.list_commands():
+            lines.append(f"  {command.name:<10} {command.description}")
+
+        return "\n".join(lines)
 
     def exit_command(args):
         return "Goodbye."
@@ -51,6 +56,7 @@ def main():
         except KeyboardInterrupt:
             print("\nGoodbye.")
             break
+
         except EOFError:
             print("\nGoodbye.")
             break
