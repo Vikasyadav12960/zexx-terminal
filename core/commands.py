@@ -60,5 +60,6 @@ def register_builtin_commands(engine: CommandEngine) -> None:
             "exit",
             "Exit ZEXX",
             exit_command,
+            exits=True,
         )
     )

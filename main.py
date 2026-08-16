@@ -23,12 +23,18 @@ def main():
             command_name = parts[0]
             args = parts[1:]
 
-            result = engine.execute(command_name, args)
+            command = engine.get_command(command_name)
+
+            if command is None:
+                print(f"Unknown command: {command_name}")
+                continue
+
+            result = command.execute(args)
 
             if result:
                 print(result)
 
-            if command_name == "exit":
+            if command.exits:
                 break
 
         except KeyboardInterrupt:
