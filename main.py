@@ -1,39 +1,15 @@
-from core.command import Command, CommandEngine
+from core.command import CommandEngine
+from core.commands import VERSION, register_builtin_commands
 
 
 def main():
     engine = CommandEngine()
 
-    def help_command(args):
-        lines = ["Available commands:"]
-
-        for command in engine.list_commands():
-            lines.append(f"  {command.name:<10} {command.description}")
-
-        return "\n".join(lines)
-
-    def exit_command(args):
-        return "Goodbye."
-
-    engine.register(
-        Command(
-            "help",
-            "Show available commands",
-            help_command,
-        )
-    )
-
-    engine.register(
-        Command(
-            "exit",
-            "Exit ZEXX",
-            exit_command,
-        )
-    )
+    register_builtin_commands(engine)
 
     print("╔══════════════════════════════════╗")
     print("║          ZEXX TERMINAL           ║")
-    print("║       Retro Terminal v0.1.0      ║")
+    print(f"║       Retro Terminal v{VERSION}      ║")
     print("╚══════════════════════════════════╝")
 
     while True:
@@ -47,11 +23,13 @@ def main():
             command_name = parts[0]
             args = parts[1:]
 
-            if command_name == "exit":
-                print(engine.execute(command_name, args))
-                break
+            result = engine.execute(command_name, args)
 
-            print(engine.execute(command_name, args))
+            if result:
+                print(result)
+
+            if command_name == "exit":
+                break
 
         except KeyboardInterrupt:
             print("\nGoodbye.")
