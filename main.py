@@ -29,7 +29,7 @@ def main():
                 print(f"Unknown command: {command_name}")
                 continue
 
-            result = command.execute(args)
+            result = engine.execute(command_name, args)
 
             if result:
                 print(result)
