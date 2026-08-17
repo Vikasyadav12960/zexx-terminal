@@ -1,6 +1,7 @@
 # Contributing to ZEXX Terminal
 
 Thank you for your interest in contributing to ZEXX Terminal!
+        And We are here to help you in further !
 
 ## Getting Started
 
