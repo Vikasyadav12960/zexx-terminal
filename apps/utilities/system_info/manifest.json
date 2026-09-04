@@ -1,0 +1,6 @@
+{
+    "name": "System Info",
+    "id": "system_info",
+    "category": "utilities",
+    "entry": "app.py"
+}
