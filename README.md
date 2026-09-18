@@ -20,7 +20,7 @@ The goal is to build an extensible ecosystem where adding a new application is a
 
 ## ✨ Planned Features
 
-- 🎮 Terminal Games
+- 🎮 Terminal Gamess
 - 🛠️ Productivity Utilities
 - 🎨 Theme Engine
 - 🔌 Automatic Plugin Loader
