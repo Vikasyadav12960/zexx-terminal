@@ -1,67 +1,56 @@
 # ZEXX Terminal
 
-> A modular retro-inspired terminal operating environment built with Python.
+> A modular retro-inspired terminal environment built with Python.
 
 ![Python](https://img.shields.io/badge/Python-3.12+-blue)
+![Textual](https://img.shields.io/badge/Textual-8.2.8-purple)
 ![License](https://img.shields.io/badge/License-MIT-green)
-![Status](https://img.shields.io/badge/Status-Development-orange)
+![Status](https://img.shields.io/badge/Status-Active%20Development-orange)
 
 ---
 
-## 🚀 Overview
+## 🖥️ Overview
 
-ZEXX Terminal is a modern, modular terminal platform inspired by DOS terminals, retro CRT displays, and arcade systems.
+**ZEXX Terminal** is a modular terminal environment inspired by classic DOS systems, CRT interfaces, and retro computer terminals.
 
-Instead of being a single application, ZEXX acts as a launcher capable of discovering and running games and utilities through a plugin-based architecture.
+The project is being built as a lightweight platform where applications can be discovered, registered, and launched automatically through a simple folder-and-manifest architecture.
 
-The goal is to build an extensible ecosystem where adding a new application is as simple as creating a new folder.
-
----
-
-## ✨ Planned Features
-
-- 🎮 Terminal Gamess
-- 🛠️ Productivity Utilities
-- 🎨 Theme Engine
-- 🔌 Automatic Plugin Loader
-- 💾 Save System
-- 🤖 AI Assistant (Future)
-- ☁️ Cloud Features (Future)
+The long-term goal is to turn ZEXX into a small extensible terminal ecosystem containing utilities, games, tools, themes, and eventually AI-powered features.
 
 ---
 
-## 📂 Project Structure
+## 🚧 Current Status
+
+ZEXX is currently in **early core development**.
+
+The current version has moved beyond the initial project foundation and now includes:
+
+- Application discovery
+- Manifest-based application definitions
+- Application registry
+- Application launcher
+- Textual-based terminal UI
+- Keyboard-based application selection
+- Application launching from the TUI
+- System information utility
+- Basic command architecture
+- GitHub Actions CI foundation
+- Retro-inspired bordered interface
+
+The current focus is improving the core experience, performance, reliability, and preparing the project for the eventual **v1.0.0 stable release**.
+
+---
+
+## ✨ Current Features
+
+### 🔎 Application Discovery
+
+ZEXX automatically searches the `apps/` directory for application manifests.
+
+Each application can define:
 
 ```text
-apps/
-core/
-themes/
-plugins/
-assets/
-docs/
-tests/
-```
-
----
-
-## 🛣️ Roadmap
-
-- [x] Phase 0 — Vision & Foundation
-- [ ] Phase 1 — Core Engine
-- [ ] Phase 2 — UI & Experience
-- [ ] Phase 3 — Plugin System
-- [ ] Phase 4 — Games Platform
-- [ ] Phase 5 — Utilities Platform
-- [ ] Phase 6 — Themes
-- [ ] Phase 7 — Save System
-- [ ] Phase 8 — Stable Release (v1.0)
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License.
-
----
-
-**ZEXX Terminal is currently under active development.**
+name
+id
+category
+entry
