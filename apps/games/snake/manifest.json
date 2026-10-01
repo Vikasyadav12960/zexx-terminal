@@ -1,0 +1,6 @@
+{
+    "name": "Snake",
+    "id": "snake",
+    "category": "games",
+    "entry": "app.py"
+}
